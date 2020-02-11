@@ -9,7 +9,8 @@ public class RandomUtilTest {
 	@Test
 	public void testRandom() {
 		for (int i = 0; i <50; i++) {
-			RandomUtil.random(1, 3);
+			int j = RandomUtil.random(1, 3);
+			System.out.println(j);
 		}
 		
 				
@@ -18,7 +19,10 @@ public class RandomUtilTest {
 
 	@Test
 	public void testSubRandom() {
-		RandomUtil.subRandom(1, 10, 3);
+		int[] random = RandomUtil.subRandom(1, 10, 3);
+		for (int i : random) {
+			System.out.println(i);
+		}
 	}
 
 	@Test
