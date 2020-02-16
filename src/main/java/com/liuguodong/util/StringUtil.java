@@ -1,6 +1,7 @@
 package com.liuguodong.util;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.Random;
 
 /**
@@ -11,6 +12,21 @@ import java.util.Random;
  * @date: 2020年1月2日 下午8:12:13
  */
 public class StringUtil {
+	
+//	校验传入的参数是否为url
+	public static boolean isHttpUrl(String param) {
+		 URL url;  
+		 try {  
+	         url = new URL(param);
+	        url.openStream();  
+	         return true; //url合法
+	    } catch (Exception e1) {  
+	         System.out.println("连接打不开!");  
+	       
+	    }  
+		 return false;
+		
+	}
 
 	//方法1：判断源字符串是否有值，空引号(空白字符串)也算没值 
 	public static boolean hasLength(String src){

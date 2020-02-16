@@ -6,6 +6,16 @@ import java.util.Date;
 import org.junit.Test;
 
 public class StringUtilTest {
+	
+	
+	@Test
+  public void testIsHttpUrl() {
+		
+	//	String url="abc";//���Ϸ�
+		String url="https://www.baidu.com";//�Ϸ�
+		boolean b = StringUtil.isHttpUrl(url);
+	  System.out.println(b);
+  }
 
 	@Test
 	public void testHasLength() {
